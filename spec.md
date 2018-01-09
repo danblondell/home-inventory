@@ -21,6 +21,9 @@
 
 
 # Project Specific Specs - Home Inventory
+## General
+- [ ] Update config.ru to include controllers for added models
+
 
 ## User
 Attributes:
