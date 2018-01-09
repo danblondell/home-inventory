@@ -9,4 +9,8 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "drily-slew-barberry-plea"
   end
 
+  get '/' do
+  	"Shit's Working"
+  end
+
 end
