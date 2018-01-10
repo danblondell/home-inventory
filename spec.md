@@ -3,9 +3,9 @@
 ## Specs:
 - [x] Use Sinatra to build the app
 - [ ] Use ActiveRecord for storing information in a database
-- [ ] Include more than one model class (list of model class names e.g. User, Post, Category)
-- [ ] Include at least one has_many relationship (x has_many y e.g. User has_many Posts)
-- [ ] Include user accounts
+- [x] Include more than one model class (list of model class names e.g. User, Post, Category)
+- [x] Include at least one has_many relationship (x has_many y e.g. User has_many Posts)
+- [x] Include user accounts
 - [ ] Ensure that users can't modify content created by other users
 - [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
 - [ ] Include user input validations
@@ -30,16 +30,16 @@ Attributes:
 - [ ] Username, Password, First Name, Last Name, Address
 	- [ ] Find best practice for recording mailing addresses in activerecord
 Relationships:
-- [ ] Has many Rooms
-- [ ] Has many Items through Rooms 
+- [x] Has many Rooms
+- [x] Has many Items through Rooms 
 
 
 ## Room
 Attributes:
 - [ ] Name, Notes, Owner ID
 Relationships:
-- [ ] Belongs to User
-- [ ] Has many Items
+- [x] Belongs to User
+- [x] Has many Items
 
 
 ## Item
@@ -49,5 +49,5 @@ Attributes:
 	- [ ] Should categories be predefined, and if so how can they be predefined? Should category be another object?
 	- [ ] Ideally you should be able to sort by all items of the same category. e.g. domain.com/items/categories/books
 Relationships:
-- [ ] Belongs to Room
+- [x] Belongs to Room
 
