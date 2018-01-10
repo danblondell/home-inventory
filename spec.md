@@ -22,7 +22,21 @@
 
 # Project Specific Specs - Home Inventory
 ## General
-- [ ] Update config.ru to include controllers for added models
+- [x] Update config.ru to include controllers for added models
+
+## Functions
+User:
+- [ ] Create user
+- [ ] Login as user
+Room:
+- [ ] Create a room
+- [ ] View all of a user's rooms
+- [ ] View a room page with all of its objects
+- [ ] Edit room name
+Items:
+- [ ] Create a new item and assign it to a room through a dropdown
+	- [ ] Set datepicker and category list in item form
+- [ ] Edit any details related to an object, including moving its room
 
 
 ## User
