@@ -25,12 +25,16 @@
 - [x] Update config.ru to include controllers for added models
 
 ## Functions
+General:
+- [ ] Add layout with sign out, create room, create item, etc
 User:
 - [x] Create user
 - [x] Login as user
 Room:
-- [ ] Create a room
-- [ ] View all of a user's rooms
+- [x] Create a room
+- [x] View all of a user's rooms
+- [ ] If there are no rooms in someone's account, prompt to create a new room
+- [ ] If there are no items in a room, prompt to create a new item
 - [ ] View a room page with all of its objects
 - [ ] Edit room name
 Items:
