@@ -1,1 +1,6 @@
 <h1>Here are all your rooms</h1>
+
+
+<% @user.rooms.each do |room| %>
+	<p><a href=<%= "/rooms/#{room.id}" %>><%= room.name %></a></p>
+<% end %>

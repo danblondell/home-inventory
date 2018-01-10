@@ -1,6 +1,10 @@
 class RoomsController < ApplicationController
 
 	get '/rooms' do
+		redirect_to_login_page_if_not_logged_in
+
+		@user = current_user
+
 		erb :'/rooms/index'
 	end
 
@@ -12,19 +16,13 @@ class RoomsController < ApplicationController
 	end
 
 	post '/rooms/new' do
-		binding.pry
-
-		# if room = Room.find_by(name: params[:name])
-		# 	redirect "/rooms/#{room.id}"
-		# end
-
-		room = Room.create(name: params[:name])
-
-		if !params[:notes].empty?
-			room.notes = params[:notes]
+		if room = Room.find_by(name: params[:room][:name])
+			redirect "/rooms/#{room.id}"
 		end
 
+		room = Room.new(params[:room])
 		current_user.rooms << room
+
 		room.save
 
 		redirect "/rooms/#{room.id}"
