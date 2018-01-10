@@ -26,8 +26,8 @@
 
 ## Functions
 User:
-- [ ] Create user
-- [ ] Login as user
+- [x] Create user
+- [x] Login as user
 Room:
 - [ ] Create a room
 - [ ] View all of a user's rooms
