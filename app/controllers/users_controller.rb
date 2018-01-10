@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 	end
 
 	get '/login' do
+		redirect "/rooms" if logged_in?
 		erb :'/users/login'
 	end
 
