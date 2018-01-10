@@ -27,8 +27,7 @@
 
 ## User
 Attributes:
-- [ ] Username, Password, First Name, Last Name, Address
-	- [ ] Find best practice for recording mailing addresses in activerecord
+- [x] Username, Email, First Name, Password
 Relationships:
 - [x] Has many Rooms
 - [x] Has many Items through Rooms 
@@ -36,7 +35,7 @@ Relationships:
 
 ## Room
 Attributes:
-- [ ] Name, Notes, Owner ID
+- [x] Name, Notes, Owner ID
 Relationships:
 - [x] Belongs to User
 - [x] Has many Items
@@ -44,8 +43,8 @@ Relationships:
 
 ## Item
 Attributes:
-- [ ] Name, Brand, Date of Purchase, Cost, Category, Source, Notes, Room ID
-	- [ ] Find best practice for recording dates (not timestamps) in activerecord
+- [x] Name, Brand, Date of Purchase, Cost, Category, Source, Notes, Room ID
+	- [x] Find best practice for recording dates (not timestamps) in activerecord
 	- [ ] Should categories be predefined, and if so how can they be predefined? Should category be another object?
 	- [ ] Ideally you should be able to sort by all items of the same category. e.g. domain.com/items/categories/books
 Relationships:
