@@ -16,7 +16,7 @@ class RoomsController < ApplicationController
 	end
 
 	post '/rooms/new' do
-		if room = Room.find_by(name: params[:room][:name])
+		if room = current_user.rooms.find_by(name: params[:room][:name])
 			redirect "/rooms/#{room.id}"
 		end
 
