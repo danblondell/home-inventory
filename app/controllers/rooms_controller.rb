@@ -36,4 +36,9 @@ class RoomsController < ApplicationController
 
 		erb :'/rooms/show'
 	end
+
+	get '/rooms/:id/delete' do
+		@room = current_user.rooms.find_by_id(params[:id])
+		erb :'/rooms/delete'
+	end
 end

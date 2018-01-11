@@ -42,6 +42,7 @@ Room:
 - [ ] View a room page with all of its objects
 - [ ] Edit room name
 - [ ] Delete room
+- [ ] Deleting a room should reassign all its items to new room object: No Room Assigned
 Items:
 - [ ] Create a new item and assign it to a room through a dropdown
 	- [ ] Set datepicker and category list in item form
