@@ -27,8 +27,8 @@
 ## Functions
 General:
 - [x] Add layout with sign out, create room, create item, etc
-- [ ] Can I add some CSS styling? Where does it go? Public folder?
-- [ ] Add error message where needed
+- [x] Can I add some CSS styling? Where does it go? Public folder?
+- [ ] Add error messages where needed
 - [ ] Make sure rooms are only found through user
 - [ ] Make sure items are only found through rooms or users
 User:
@@ -41,8 +41,8 @@ Room:
 - [ ] If there are no rooms in someone's account, prompt to create a new room
 - [ ] If there are no items in a room, prompt to create a new item
 - [ ] View a room page with all of its objects
-- [ ] Edit room name
-- [ ] Delete room
+- [x] Edit room name
+- [x] Delete room
 - [ ] Deleting a room should reassign all its items to new room object: No Room Assigned
 Items:
 - [ ] Create a new item and assign it to a room through a dropdown

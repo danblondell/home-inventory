@@ -46,14 +46,14 @@ class RoomsController < ApplicationController
 		erb :'/rooms/edit'
 	end
 
-	patch '/rooms/:id/edit' do
+	post '/rooms/:id/edit' do
 		redirect_to_login_page_if_not_logged_in
 		assign_room_variable
 		redirect_if_room_doesnt_belong_to_user
 
-		@room.update()
+		@room.update(params[:room])
 
-		erb :'/rooms/edit'
+		redirect "/rooms/#{@room.id}"
 	end
 
 	get '/rooms/:id/delete' do
@@ -66,6 +66,7 @@ class RoomsController < ApplicationController
 	end
 
 	post '/rooms/:id/delete' do
+		redirect_to_login_page_if_not_logged_in
 		assign_room_variable
 		redirect_if_room_doesnt_belong_to_user
 

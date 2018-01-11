@@ -1,10 +1,11 @@
 <h1 style="color:#999"><%= "Edit <span style='color:#000'>#{@room.name.titlecase}</span>"%></h1>
 
-<form action="/rooms/new" method="post">
-	<p><label for="name">Room Name:</label><br><input type="text" name="room[name]" id="name" required></p>
-	<p><label for="notes">Notes:</label><br><input type="text" name="room[notes]" id="notes"></p>
+<form action="/rooms/<%= @room.id %>/edit" method="post">
+	<input id="hidden" type="hidden" name="_method" value="PATCH">
+	<p><label for="name">Room Name:</label><br><input type="text" name="room[name]" id="name"  value="<%= @room.name %>"required></p>
+	<p><label for="notes">Notes:</label><br><input type="text" name="room[notes]" id="notes" value="<%= @room.notes %>"></p>
 
-	<input type="submit" name="Create Room" id="Create Room">
+	<input type="submit" name="Edit Room" id="Edit Room">
 </form>
 <br><br>
 <a href="/rooms/<%= @room.id %>/delete"> Delete This Room</a>
