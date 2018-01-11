@@ -1,0 +1,13 @@
+<h1>Create a New Item in <%= @user.first_name.titlecase %>'s House</h1>
+
+<form action="/items/new" method="post">
+	<p><label for="name">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="brand">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="date_purchased">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="cost">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="source_of_purchase">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="category">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="notes">Notes:</label><br><input type="textarea" name="Item[notes]" id="notes"></p>
+
+	<input type="submit" name="Create Item" id="Create Item">
+</form>
