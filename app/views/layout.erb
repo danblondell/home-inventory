@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Home Inventory | </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" type="text/css" href="/custom.css"> 
 </head>
 <body>
+	<div id="navbar">
 	<% if !!@user %>
-	 	<p><a href="/rooms">Home</a>  |  <a href="/items/new">Add an Item</a>  |  <a href="/rooms/new">Add a Room</a></p>
+	 	<p>
+		 	<a href="/rooms">Home</a>
+		 	<a href="/items/new">Add an Item</a>
+		 	<a href="/rooms/new">Add a Room</a>
+		</p>
 	 <% else %>
-	 	<p><a href="/login">Login</a>  |  <a href="/signup">Signup</a></p>
+	 	<p>
+	 		<a href="/login">Login</a>
+	 		<a href="/signup">Signup</a>
+	 	</p>
 	 <% end %>
+	</div>
 
+	 <div id="content">
+		 <%= yield %>
+	</div>
 
-	 <%= yield %>
-	
-
+	 <% if !!@user %>
+	 <div id="footer">
+	 	<p><a href="/logout">Logout</a>
+	</div>
+	 <% end %>
 </body>
 </html>

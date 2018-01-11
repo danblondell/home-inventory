@@ -1,3 +1,33 @@
-body {
-	padding: 3%;
+#content {
+	padding: 0 3%;
+}
+
+#navbar {
+	margin-bottom: 3em;
+	padding: 1% 2%;
+	background-color: #efefef;
+}
+
+#navbar a {
+	font-weight: 700;
+	background-color: #007BFF;
+	color: white;
+	display: inline-block;
+	padding: 1em;
+	border-radius: 8px;
+	width: 10em;
+	text-align: center;
+	text-decoration: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#navbar a:hover {
+	background-color: #4E8CFF;
+}
+
+#footer {
+	margin-top: 4em;
+	padding: 1% 2%;
+	background-color: #efefef;
 }
