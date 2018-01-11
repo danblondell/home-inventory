@@ -27,6 +27,8 @@
 ## Functions
 General:
 - [ ] Add layout with sign out, create room, create item, etc
+- [ ] Can I add some CSS styling? Where does it go? Public folder?
+- [ ] Add error message where needed
 User:
 - [x] Create user
 - [x] Login as user
@@ -37,10 +39,12 @@ Room:
 - [ ] If there are no items in a room, prompt to create a new item
 - [ ] View a room page with all of its objects
 - [ ] Edit room name
+- [ ] Delete room
 Items:
 - [ ] Create a new item and assign it to a room through a dropdown
 	- [ ] Set datepicker and category list in item form
 - [ ] Edit any details related to an object, including moving its room
+- [ ] Delete item
 
 
 ## User
