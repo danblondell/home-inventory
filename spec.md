@@ -34,6 +34,7 @@ General:
 User:
 - [x] Create user
 - [x] Login as user
+- [ ] Index of all a user's items, sorted by room, with room assignment editable en-mass.
 Room:
 - [x] Create a room
 - [x] View all of a user's rooms

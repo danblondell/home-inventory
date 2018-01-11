@@ -43,6 +43,20 @@ body {
 	color: #4E8CFF;
 }
 
+#delete-button {
+	padding: 1em;
+	background-color: red;
+	color: #fff;
+	border-style: none;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+#delete-button:hover {
+	cursor: pointer;
+	background-color: #FF7F81;
+}
+
 #footer {
 	margin-top: 4em;
 	padding: 3%;

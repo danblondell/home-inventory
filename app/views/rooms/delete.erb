@@ -1,2 +1,8 @@
 <h1 style="color: #000"><%= "Are you sure you want to delete the <span style='color:red'>#{@room.name.titlecase}</span>?"%></h1>
-
+<br><br>
+<form method="post" action="/rooms/<%=@room.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input id="delete-button" type="submit" value="YES Delete My <%= @room.name.titlecase %>">
+</form>
+<br><br>
+<a href="/rooms/<%= @room.id %>">NO WAIT! Take me back to somewhere safe.</a>
