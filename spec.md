@@ -8,7 +8,7 @@
 - [x] Include user accounts
 - [ ] Ensure that users can't modify content created by other users
 - [ ] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
-- [ ] Include user input validations
+- [x] Include user input validations
 - [ ] Display validation failures to user with error message (example form URL e.g. /posts/new)
 - [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
@@ -38,7 +38,7 @@ User:
 Room:
 - [x] Create a room
 - [x] View all of a user's rooms
-- [ ] If there are no rooms in someone's account, prompt to create a new room
+- [X] If there are no rooms in someone's account, prompt to create a new room
 - [ ] If there are no items in a room, prompt to create a new item
 - [ ] View a room page with all of its objects
 - [x] Edit room name

@@ -1,4 +1,4 @@
-<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@room.name.titlecase}</span> in #{@user.first_name}'s Home"%></h1>
+<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@room.name.titlecase}</span> in #{@user.first_name.titlecase}'s Home"%></h1>
 
 <% if !@room.notes.empty? %>
 	<p style="color:#999"><%= @room.notes %></p>

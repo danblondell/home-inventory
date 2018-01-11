@@ -1,4 +1,4 @@
-<h1>Create a New Room in <%= @user.first_name %>'s House</h1>
+<h1>Create a New Room in <%= @user.first_name.titlecase %>'s House</h1>
 
 <form action="/rooms/new" method="post">
 	<p><label for="name">Room Name:</label><br><input type="text" name="room[name]" id="name" required></p>
