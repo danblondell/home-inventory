@@ -27,6 +27,15 @@ class ApplicationController < Sinatra::Base
   	def redirect_to_login_page_if_not_logged_in
   		redirect "/login" if !logged_in?
   	end
+
+    def assign_room_variable
+      @room = current_user.rooms.find_by_id(params[:id])
+    end
+
+    def redirect_if_room_doesnt_belong_to_user
+      redirect '/rooms' if @room == nil
+    end
+
   end
 
 end

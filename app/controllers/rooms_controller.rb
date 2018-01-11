@@ -30,15 +30,42 @@ class RoomsController < ApplicationController
 
 	get '/rooms/:id' do
 		redirect_to_login_page_if_not_logged_in
+		assign_room_variable
+		redirect_if_room_doesnt_belong_to_user
 
 		@user = current_user
-		@room = @user.rooms.find_by_id(params[:id])
 
 		erb :'/rooms/show'
 	end
 
+	get '/rooms/:id/edit' do
+		redirect_to_login_page_if_not_logged_in
+		assign_room_variable
+		redirect_if_room_doesnt_belong_to_user
+
+		erb :'/rooms/edit'
+	end
+
 	get '/rooms/:id/delete' do
-		@room = current_user.rooms.find_by_id(params[:id])
+		redirect_to_login_page_if_not_logged_in
+		assign_room_variable
+		redirect_if_room_doesnt_belong_to_user
+		
+
 		erb :'/rooms/delete'
 	end
+
+	delete '/rooms/:id/delete' do
+		assign_room_variable
+		redirect_if_room_doesnt_belong_to_user
+
+		@room = current_user.rooms.find_by_id(params[:id])
+
+		if @room
+			@room.delete
+			redirect to '/rooms'
+		else
+			redirect to '/rooms'
+		end	
+  	end
 end
