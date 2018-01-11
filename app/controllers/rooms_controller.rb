@@ -31,8 +31,8 @@ class RoomsController < ApplicationController
 	get '/rooms/:id' do
 		redirect_to_login_page_if_not_logged_in
 
-		@room = Room.find_by_id(params[:id])
 		@user = current_user
+		@room = @user.rooms.find_by_id(params[:id])
 
 		erb :'/rooms/show'
 	end
