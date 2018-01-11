@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/custom.css"> 
 </head>
 <body>
-	<% if !!@user %>
+	<% if @logged_in %>
 		<div id="navbar">
 			<a id="home-button" href="/rooms">自宅</a>
 		 	<a id="nav-button" href="/items/new">Add an Item</a>
