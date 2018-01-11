@@ -29,7 +29,6 @@ class ApplicationController < Sinatra::Base
   		User.find_by_id(session[:user_id])
   	end
 
-
   	def redirect_to_login_page_if_not_logged_in
   		redirect "/login" if !logged_in?
   	end
@@ -42,6 +41,13 @@ class ApplicationController < Sinatra::Base
       redirect '/rooms' if @room == nil
     end
 
+    def assign_item_variable
+      @item = current_user.items.find_by_id(params[:id])
+    end
+
+    def redirect_if_item_doesnt_belong_to_user
+      redirect '/items' if @item == nil
+    end
   end
 
 end

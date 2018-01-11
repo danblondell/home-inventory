@@ -1,0 +1,15 @@
+<h1><%= @user.first_name.titlecase %>'s Items</h1>
+
+
+<% if !@user.items.empty? %>
+	<% @user.rooms.each do |room| %>
+		<h2><a href=<%= "/rooms/#{room.id}" %>><%= room.name.titlecase %></a></h2>
+
+		<% room.items.each do |item| %>
+			<p><a href=<%= "/items/#{item.id}" %>><%= item.name %></a></p>
+		<% end %>
+	<% end %>
+
+<% else %>
+	<a href="/items/new">Make an item, bro.</a>
+<% end %>
