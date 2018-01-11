@@ -30,7 +30,7 @@
 		 <%= yield %>
 	</div>
 
-	 <% if !!@user %>
+	 <% if @logged_in %>
 	 <div id="footer">
 	 	<p><a href="/logout">Logout</a>
 	</div>

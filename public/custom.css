@@ -43,11 +43,27 @@ body {
 	color: #4E8CFF;
 }
 
+input[type=submit] {
+	padding: .5em;
+	background-color: #007BFF;
+	color: #ffffff;
+	border-style: none;
+	border-radius: 8px;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+input[type=submit]:hover {
+	cursor: pointer;
+	background-color: #4E8CFF;
+}
+
 #delete-button {
 	padding: 1em;
 	background-color: red;
 	color: #fff;
 	border-style: none;
+	border-radius: 8px;
 	-webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }

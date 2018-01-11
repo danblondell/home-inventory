@@ -2,7 +2,7 @@
 <br><br>
 <form method="post" action="/rooms/<%=@room.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
-  <input id="delete-button" type="submit" value="YES Delete My <%= @room.name.titlecase %>">
+  <input id="delete-button" type="submit" value="Delete My <%= @room.name.titlecase %>">
 </form>
 <br><br>
 <a href="/rooms/<%= @room.id %>">NO WAIT! Take me back to somewhere safe.</a>
