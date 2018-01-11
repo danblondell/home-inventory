@@ -7,21 +7,24 @@
 	<link rel="stylesheet" type="text/css" href="/custom.css"> 
 </head>
 <body>
-	<div id="navbar">
 	<% if !!@user %>
-	 	<p>
-		 	<a href="/rooms">Home</a>
-		 	<a href="/items/new">Add an Item</a>
-		 	<a href="/rooms/new">Add a Room</a>
-		</p>
+		<div id="navbar">
+			<a id="home-button" href="/rooms">自宅</a>
+		 	<a id="nav-button" href="/items/new">Add an Item</a>
+		 	<a id="nav-button" href="/rooms/new">Add a Room</a>
+		</div>
+	 <% elsif @is_index %>
+		<div id="navbar">
+			<h1>Welcome to Home Inventory!</h1>
+		 	<a id="nav-button" href="/login">Login</a>
+		 	<a id="nav-button" href="/signup">Sign Up</a>
+		</div>
 	 <% else %>
-	 	<p>
-	 		<h1>Welcome to Home Inventory!</h1>
-	 		<a href="/login">Login</a>
-	 		<a href="/signup">Signup</a>
-	 	</p>
+	 	<div id="navbar">
+			<a id="home-button" href="/">自宅</a>
+		</div>
 	 <% end %>
-	</div>
+	
 
 	 <div id="content">
 		 <%= yield %>

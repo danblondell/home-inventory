@@ -1,5 +1,8 @@
 <h1><%= "This is the #{@room.name.downcase} in #{@user.first_name}'s home" %></h1>
 
 <% if !@room.notes.empty? %>
-	<p>Notes: <%= @room.notes %></p>
+	<p><%= @room.notes %></p>
 <% end %>
+
+<p><a href="/rooms/edit">Edit Room</a></p>
+<p></p>
