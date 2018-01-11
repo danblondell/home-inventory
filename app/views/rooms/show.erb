@@ -1,7 +1,7 @@
-<h1><%= "This is the #{@room.name.downcase} in #{@user.first_name}'s home" %></h1>
+<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@room.name.titlecase}</span> in #{@user.first_name}'s Home"%></h1>
 
 <% if !@room.notes.empty? %>
-	<p><%= @room.notes %></p>
+	<p style="color:#999"><%= @room.notes %></p>
 <% end %>
 
 <p><a href="/rooms/edit">Edit Room</a></p>
