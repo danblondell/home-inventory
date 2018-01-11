@@ -26,9 +26,11 @@
 
 ## Functions
 General:
-- [ ] Add layout with sign out, create room, create item, etc
+- [x] Add layout with sign out, create room, create item, etc
 - [ ] Can I add some CSS styling? Where does it go? Public folder?
 - [ ] Add error message where needed
+- [ ] Make sure rooms are only found through user
+- [ ] Make sure items are only found through rooms or users
 User:
 - [x] Create user
 - [x] Login as user

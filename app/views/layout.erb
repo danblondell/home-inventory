@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+</head>
+<body>
+	<% if !!@user %>
+	 	<p><a href="/rooms">Home</a>  |  <a href="/items/new">Add an Item</a>  |  <a href="/rooms/new">Add a Room</a></p>
+	 <% else %>
+	 	<p><a href="/login">Login</a>  |  <a href="/signup">Signup</a></p>
+	 <% end %>
+
+
+	 <%= yield %>
+	
+
+</body>
+</html>
