@@ -10,6 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
+    redirect to "/rooms" if logged_in?
     @is_index = true
   	erb :index
   end
