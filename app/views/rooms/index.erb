@@ -1,4 +1,4 @@
-<h1>Here are all your rooms, <%= @user.name %></h1>
+<h1><%= @user.first_name.titlecase %>'s Rooms</h1>
 
 
 <% @user.rooms.each do |room| %>
