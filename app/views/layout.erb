@@ -3,7 +3,7 @@
 <head>
 	<title>Home Inventory | </title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 	<link rel="stylesheet" type="text/css" href="/custom.css"> 
 </head>
 <body>
@@ -29,11 +29,12 @@
 		 <%= yield %>
 	</div>
 
-	 <% if @logged_in %>
 
-	 <div id="footer">
-	 	<p><a href="/logout">Logout</a>
-	</div>
-	 <% end %>
+	<% if @logged_in %>
+		<!-- <div id="footer">
+			<a href="/logout">Logout</a>
+		</div> -->
+		<footer id="footer"><a href="/logout">Logout</a></footer>
+	<% end %>
 </body>
 </html>
