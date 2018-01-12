@@ -1,0 +1,12 @@
+<h1 style="color:#999"><%= "<span style='color:#000'>#{@item.name.titlecase}</span>, currently in #{@user.first_name.titlecase}'s #{@room.name.titlecase}"%></h1>
+
+<% if !@item.notes.empty? %>
+	<p style="color:#999"><%= @item.notes %></p>
+<% end %>
+
+<!-- add display of other item attributes here -->
+
+
+
+
+<p><a href="/items/<%= @item.id %>/edit">Edit item</a>
