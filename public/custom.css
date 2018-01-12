@@ -3,7 +3,9 @@ body {
 }
 
 #content {
-	padding: 0 3% 3% 3%;
+	padding-left: 3%;
+	padding-right: 1%;
+	padding-bottom: 4em;
 }
 
 #navbar {
