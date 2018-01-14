@@ -46,7 +46,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def redirect_if_item_doesnt_belong_to_user
-      redirect '/items' if @item == nil
+      redirect '/rooms' if @item == nil
     end
   end
 

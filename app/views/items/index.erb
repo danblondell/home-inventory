@@ -8,6 +8,7 @@
 		<% room.items.each do |item| %>
 			<p><a href=<%= "/items/#{item.id}" %>><%= item.name %></a></p>
 		<% end %>
+		<br><br>
 	<% end %>
 
 <% else %>

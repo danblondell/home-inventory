@@ -34,7 +34,7 @@ General:
 User:
 - [x] Create user
 - [x] Login as user
-- [ ] Index of all a user's items, sorted by room, with room assignment editable en-mass.
+- [x] Index of all a user's items, sorted by room, DROPPED: with room assignment editable en-mass.
 Room:
 - [x] Create a room
 - [x] View all of a user's rooms
@@ -43,7 +43,7 @@ Room:
 - [x] View a room page with all of its objects
 - [x] Edit room name
 - [x] Delete room
-- [ ] Deleting a room should reassign all its items to new room object: No Room Assigned
+- [x] Deleting a room should reassign all its items to new room object: No Room Assigned
 Items:
 - [x] Create a new item and assign it to a room through a dropdown
 	- [x] Set datepicker and category list in item form
