@@ -1,8 +1,36 @@
-# home-inventory
-A simple home inventory app by Dan Blondell using Sinatra. Create as a Learn.co portfolio project.
+# 自宅 Home inventory
+A simple home inventory app by Dan Blondell using Sinatra. Created as a Learn.co portfolio project.
 
 To use locally:
 1. download it
-2. run ```bundle install``` in the containing folder in your terminal
-3. run ```shotgun``` in your terminal
-4. visit the local host address provided in your broswer of choice.
+2. run ```bundle install``` in the containing folder in terminal
+3. run ```shotgun``` in terminal
+4. visit the local host address provided in your broswer of choice
+
+
+```
+                                      /\
+                                      /\
+                                      /\
+                                    _`=='_
+                                 _-~......~-_
+                             _--~............~--_
+                       __--~~....................~~--__
+           .___..---~~~................................~~~---..___,
+            `=.________________________________________________,='
+               @^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^@
+                        |  |  I   I   II   I   I  |  |
+                        |  |__I___I___II___I___I__|  |
+                        | /___I_  I   II   I  _I___\ |
+                        |'_     ~~~~~~~~~~~~~~     _`|
+                    __-~...~~~~~--------------~~~~~...~-__
+            ___---~~......................................~~---___
+.___..---~~~......................................................~~~---..___,
+ `=.______________________________________________________________________,='
+    @^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^@
+              |   |    | |    |  |    ||    |  |    | |    |   |
+              |   |____| |____|  |    ||    |  |____| |____|   |
+              |__________________|____||____|__________________|
+            _-|_____|_____|_____|__|------|__|_____|_____|_____|-_  ________
+
+```
