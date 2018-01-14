@@ -16,14 +16,15 @@ class ItemsController < ApplicationController
 	end
 
 	post '/items/new' do
-		if item = current_user.items.find_by(name: params[:item][:name])
-			redirect "/items/#{item.id}"
-		end
+		binding.pry
+		# if item = current_user.items.find_by(name: params[:item][:name])
+		# 	redirect "/items/#{item.id}"
+		# end
 
-		item = Room.new(params[:item])
-		current_user.items << item
+		# item = Room.new(params[:item])
+		# current_user.items << item
 
-		item.save
+		# item.save
 
 		redirect "/items/#{item.id}"
 	end

@@ -1,25 +1,26 @@
 <h1>Create a New Item in <%= @user.first_name.titlecase %>'s House</h1>
 
 <form action="/items/new" method="post">
-	<p><label for="name">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="name">Item Name:</label><br><input type="text" name="item[name]" id="name" required></p>
 
-	<p><label for="brand">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="category">Category:</label><br><input type="text" name="item[category]" id="category" required></p>
 
-	<!-- date picker needed for date validation / hygene -->
-	<p><label for="date_purchased">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="brand">Brand:</label><br><input type="text" name="item[brand]" id="brand"></p>
+
+	<p><label for="date_purchased">Date Purchased:</label><br><input type="date" name="item[date_purchased]" id="date" placeholder="yyyy-mm-dd"></p>
 
 	<!-- how to validate cost format? -->
-	<p><label for="cost">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="cost">Cost:</label><br><input type="number" name="item[cost]" id="cost" step="0.01"></p>
 
-	<p><label for="source_of_purchase">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="source_of_purchase">Purchased From:</label><br><input type="text" name="item[source_of_purchase]" id="source_of_purchase"></p>
 
-	<!-- picklist with "other" that allows user to create their own persistent categories? -->
-	<p><label for="category">Item Name:</label><br><input type="text" name="Item[name]" id="name" required></p>
+	<p><label for="room">Room:</label><br><select name="item[room_id]" type="number" id="room">
+		<% @user.rooms.each do |room|%>
+			<option value="<%= room.id %>"><%= room.name %></option>
+		<% end %>
+	</select></p>
 
-	<p><label for="notes">Notes:</label><br><input type="textarea" name="Item[notes]" id="notes"></p>
-
-
-	<!-- dropdown with rooms listed -->
+	<p><label for="notes">Notes:</label><br><input type="text" name="item[notes]" id="notes"></p>
 
 	<input type="submit" name="Create Item" id="Create Item">
 </form>
