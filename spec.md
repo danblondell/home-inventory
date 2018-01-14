@@ -45,8 +45,8 @@ Room:
 - [x] Delete room
 - [ ] Deleting a room should reassign all its items to new room object: No Room Assigned
 Items:
-- [ ] Create a new item and assign it to a room through a dropdown
-	- [ ] Set datepicker and category list in item form
+- [x] Create a new item and assign it to a room through a dropdown
+	- [x] Set datepicker and category list in item form
 - [ ] Edit any details related to an object, including moving its room
 - [ ] Delete item
 
@@ -71,8 +71,8 @@ Relationships:
 Attributes:
 - [x] Name, Brand, Date of Purchase, Cost, Category, Source, Notes, Room ID
 	- [x] Find best practice for recording dates (not timestamps) in activerecord
-	- [ ] Should categories be predefined, and if so how can they be predefined? Should category be another object?
-	- [ ] Ideally you should be able to sort by all items of the same category. e.g. domain.com/items/categories/books
+	- DROPPED [ ] Should categories be predefined, and if so how can they be predefined? Should category be another object?
+	- DROPPED [ ] Ideally you should be able to sort by all items of the same category. e.g. domain.com/items/categories/books
 Relationships:
 - [x] Belongs to Room
 
