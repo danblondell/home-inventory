@@ -30,8 +30,6 @@ class ItemsController < ApplicationController
 		assign_item_variable
 		redirect_if_item_doesnt_belong_to_user
 
-		binding.pry	
-
 		erb :'/items/show'
 	end
 

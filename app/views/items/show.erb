@@ -1,7 +1,15 @@
+<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@item.name.titlecase}</span>, which is currently in #{@item.user.first_name.titlecase}'s #{@item.room.name.titlecase}"%></h1>
 
 
+<% @item.attributes.each do | attr_name, attr_value | %>
+	<% if attr_name != "name" && attr_name != "id" && attr_name != "room_id" && attr_name != "date_purchased" %>
+		<p><strong><%= attr_name.gsub(/_/, " ").titlecase %></strong>: <%= attr_value %></p>
+	<% elsif attr_name == "date_purchased" %>
+		<p><strong><%= attr_name.gsub(/_/, " ").titlecase %></strong>: <%= attr_value.strftime("%B %d, %Y") %></p>
+	<% end %>
+<% end %>
 
-<!-- add display of other item attributes here -->
+<p><strong>Room:</strong> <a href=<%= "/rooms/#{@item.room_id}" %>><%= @item.room.name.titlecase %></a></p>
 
 
 <p><a href="/items/<%= @item.id %>/edit">Edit item</a>
