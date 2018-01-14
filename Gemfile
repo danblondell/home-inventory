@@ -11,4 +11,5 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem "tux"
+gem 'rack-flash3'
 # gem 'bootstrap', '~> 4.0.0.beta3'

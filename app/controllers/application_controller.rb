@@ -1,4 +1,5 @@
 require './config/environment'
+require 'rack-flash'
 
 class ApplicationController < Sinatra::Base
 
@@ -8,6 +9,8 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret, "drily-slew-barberry-plea"
   end
+
+  use Rack::Flash
 
   get '/' do
     redirect to "/rooms" if logged_in?
@@ -30,6 +33,7 @@ class ApplicationController < Sinatra::Base
   	end
 
   	def redirect_to_login_page_if_not_logged_in
+      flash[:message] = "Looks like you're not logged in. Please log in first." if !logged_in?
   		redirect "/login" if !logged_in?
   	end
 
@@ -38,6 +42,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def redirect_if_room_doesnt_belong_to_user
+      flash[:message] = "Are you trying to go into other people's rooms?" if @room == nil
       redirect '/rooms' if @room == nil
     end
 
@@ -46,6 +51,7 @@ class ApplicationController < Sinatra::Base
     end
 
     def redirect_if_item_doesnt_belong_to_user
+      flash[:message] = "Are you trying to look at other people's things?" if @item == nil
       redirect '/rooms' if @item == nil
     end
   end

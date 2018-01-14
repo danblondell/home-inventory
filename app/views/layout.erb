@@ -25,6 +25,12 @@
 		</div>
 	 <% end %>
 
+	 <div id="flashmessage">
+		<% if flash.has?(:message) %>
+			<%= flash[:message] %>
+		<% end %>
+	</div>
+
 	 <div id="content">
 		 <%= yield %>
 	</div>
