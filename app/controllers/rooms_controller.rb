@@ -70,6 +70,10 @@ class RoomsController < ApplicationController
 		assign_room_variable
 		redirect_if_room_doesnt_belong_to_user
 
+		unassigned_items = current_user.rooms.find_or_create_by(name: "Unassigned Items")
+
+		unassigned_items.items << @room.items
+
 		@room.delete
 		redirect to '/rooms'
   	end

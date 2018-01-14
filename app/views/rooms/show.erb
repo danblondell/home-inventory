@@ -1,8 +1,29 @@
-<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@room.name.titlecase}</span> in #{@user.first_name.titlecase}'s Home"%></h1>
+<h1 style="color:#999"><%= 
+	if @room.name == "Unassigned Items"
+		"These items currently have no room assigned in #{@user.first_name.titlecase}'s Home"
+	else
+		"This is the <span style='color:#000'>#{@room.name.titlecase}</span> in #{@user.first_name.titlecase}'s Home"
+	end%></h1>
 
-<% if !@room.notes.empty? %>
+<% if !@room.notes != nil  %>
 	<p style="color:#999"><%= @room.notes %></p>
 <% end %>
 
-<p><a href="/rooms/<%= @room.id %>/edit">Edit Room</a>
-<p></p>
+
+<% if @room.name != "Unassigned Items" %>
+	<p><a href="/rooms/<%= @room.id %>/edit">Edit Room</a></p>
+<% end %>
+
+
+<% if @room.name != "Unassigned Items" %>
+	<br><br>
+	<h2><%= @room.name %> Items</h2>
+<% end %>
+
+<% if @room.items.empty? %>
+	<p><a href="/items/new">Make an item, bro.</a></p>
+<% else %>
+	<% @room.items.each do | item | %>
+		<p><a href="/items/<%= item.id %>"><%= item.name %></a><span style="color:#999"> | <%= item.brand %></span></p>
+	<% end %>
+<% end %>

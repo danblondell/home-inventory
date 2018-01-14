@@ -1,4 +1,4 @@
-<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@item.name.titlecase}</span>, which is currently in #{@item.user.first_name.titlecase}'s <a href='/rooms/#{@item.room_id}' style='color:#999'>#{@item.room.name.titlecase}</a>" %></h1>
+<h1 style="color:#999"><%= "This is the <span style='color:#000'>#{@item.name.titlecase}</span>, which is currently in #{@item.user.first_name.titlecase}'s <a href='/rooms/#{@item.room_id}' style='color:#007BFF'>#{@item.room.name.titlecase}</a>" %></h1>
 
 
 <% @item.attributes.each do | attr_name, attr_value | %>

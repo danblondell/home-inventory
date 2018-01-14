@@ -39,8 +39,8 @@ Room:
 - [x] Create a room
 - [x] View all of a user's rooms
 - [X] If there are no rooms in someone's account, prompt to create a new room
-- [ ] If there are no items in a room, prompt to create a new item
-- [ ] View a room page with all of its objects
+- [x] If there are no items in a room, prompt to create a new item
+- [x] View a room page with all of its objects
 - [x] Edit room name
 - [x] Delete room
 - [ ] Deleting a room should reassign all its items to new room object: No Room Assigned
