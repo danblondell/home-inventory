@@ -16,17 +16,23 @@ class ItemsController < ApplicationController
 	end
 
 	post '/items/new' do
-		binding.pry
-		# if item = current_user.items.find_by(name: params[:item][:name])
-		# 	redirect "/items/#{item.id}"
-		# end
+		if item = current_user.items.find_by(name: params[:item][:name])
+			redirect "/items/#{item.id}"
+		end
 
-		# item = Room.new(params[:item])
-		# current_user.items << item
-
-		# item.save
+		item = Item.create(params[:item])
 
 		redirect "/items/#{item.id}"
+	end
+
+	get '/items/:id' do
+		redirect_to_login_page_if_not_logged_in
+		assign_item_variable
+		redirect_if_item_doesnt_belong_to_user
+
+		binding.pry	
+
+		erb :'/items/show'
 	end
 
 end
