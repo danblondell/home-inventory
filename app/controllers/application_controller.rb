@@ -54,6 +54,16 @@ class ApplicationController < Sinatra::Base
       flash[:message] = "Are you trying to look at other people's things?" if @item == nil
       redirect '/rooms' if @item == nil
     end
+
+    def not_a_date
+      flash[:message] = "Your date needs to look like this yyyy-mm-dd (e.g. 2018-01-31) or just don't fill in a date."
+      redirect '/items/new'
+    end
+
+    def not_a_date_edit
+      flash[:message] = "Your date needs to look like this yyyy-mm-dd (e.g. 2018-01-31) or just don't fill in a date."
+      redirect "/items/#{@item.id}/edit"
+    end
   end
 
 end

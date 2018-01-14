@@ -20,7 +20,11 @@ class ItemsController < ApplicationController
 			redirect "/items/#{item.id}"
 		end
 
-		item = Item.create(params[:item])
+		item = Item.new(params[:item])
+
+		not_a_date if !item.date_purchased && !params[:item][:date_purchased].empty?
+
+		item.save
 
 		redirect "/items/#{item.id}"
 	end
@@ -48,7 +52,9 @@ class ItemsController < ApplicationController
 		assign_item_variable
 		redirect_if_item_doesnt_belong_to_user
 
-		@item.update(params[:item])
+		@item.update_attributes(params[:item])
+
+		not_a_date_edit if !params[:item][:date_purchased].empty? && @item.date_purchased == nil
 
 		redirect "/items/#{@item.id}"
 	end

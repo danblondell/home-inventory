@@ -4,9 +4,9 @@
 <% @item.attributes.each do | attr_name, attr_value | %>
 	<% if attr_name != "name" && attr_name != "id" && attr_name != "room_id" && attr_name != "date_purchased" && attr_name != "cost" && !attr_value.empty? %>
 		<p><strong><%= attr_value %></strong><br><span style="color:#999"><%= attr_name.gsub(/_/, " ").titlecase %></span></p>
-	<% elsif attr_name == "date_purchased" %>
+	<% elsif attr_name == "date_purchased" && @item.date_purchased %>
 		<p><strong><%= attr_value.strftime("%B %d, %Y") %></strong><br><span style="color:#999"><%= attr_name.gsub(/_/, " ").titlecase %></span></p>
-	<% elsif attr_name == "cost" %>
+	<% elsif attr_name == "cost" && @item.cost %>
 		<p><strong><%= "$#{attr_value}" %></strong><br><span style="color:#999"><%= attr_name.gsub(/_/, " ").titlecase %></span></p>
 	<% end %>
 <% end %>

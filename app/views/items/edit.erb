@@ -3,11 +3,11 @@
 <form action="/items/<%= @item.id %>/edit" method="post">
 	<input id="hidden" type="hidden" name="_method" value="PATCH">
 
-	<p><label for="name">Item Name:</label><br><input type="text" name="item[name]" id="name" value="<%= @item.name %>"> required</p>
+	<p><label for="name">Item Name:</label><br><input type="text" name="item[name]" id="name" value="<%= @item.name %>" required></p>
 
-	<p><label for="category">Category:</label><br><input type="text" name="item[category]" id="category" value="<%= @item.category %>"> required</p>
+	<p><label for="category">Category:</label><br><input type="text" name="item[category]" id="category" value="<%= @item.category %>" required></p>
 
-	<p><label for="brand">Brand:</label><br><input type="text" name="item[brand]" id="brand" value="<%= @item.brand %>"></p>
+	<p><label for="brand">Brand:</label><br><input type="text" name="item[brand]" id="brand" value="<%= @item.brand %>" required></p>
 
 	<p><label for="date_purchased">Date Purchased:</label><br><input type="date" name="item[date_purchased]" id="date" placeholder="yyyy-mm-dd" value="<%= @item.date_purchased %>"></p>
 
