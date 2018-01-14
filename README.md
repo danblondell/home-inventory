@@ -4,8 +4,9 @@ A simple home inventory app by Dan Blondell using Sinatra. Created as a Learn.co
 To use locally:
 1. download it
 2. run ```bundle install``` in the containing folder in terminal
-3. run ```shotgun``` in terminal
-4. visit the local host address provided in your broswer of choice
+3. run ```rake db:migrate``` to create your database
+4. run ```shotgun```
+5. visit the local host address provided in your browser of choice
 
 
 ```
