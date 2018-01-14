@@ -6,7 +6,7 @@
 		<h2><a href=<%= "/rooms/#{room.id}" %>><%= room.name.titlecase %></a></h2>
 
 		<% room.items.each do |item| %>
-			<p><a href=<%= "/items/#{item.id}" %>><%= item.name %></a></p>
+			<p><a href=<%= "/items/#{item.id}" %>><%= item.name %></a><span style="color:#999"> | <%= item.brand.titlecase %></p>
 		<% end %>
 		<br><br>
 	<% end %>

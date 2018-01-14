@@ -29,8 +29,8 @@ General:
 - [x] Add layout with sign out, create room, create item, etc
 - [x] Can I add some CSS styling? Where does it go? Public folder?
 - [ ] Add error messages where needed
-- [ ] Make sure rooms are only found through user
-- [ ] Make sure items are only found through rooms or users
+- [x] Make sure rooms are only found through user
+- [x] Make sure items are only found through rooms or users
 User:
 - [x] Create user
 - [x] Login as user
@@ -47,8 +47,8 @@ Room:
 Items:
 - [x] Create a new item and assign it to a room through a dropdown
 	- [x] Set datepicker and category list in item form
-- [ ] Edit any details related to an object, including moving its room
-- [ ] Delete item
+- [x] Edit any details related to an object, including moving its room
+- [x] Delete item
 
 
 ## User
