@@ -10,7 +10,7 @@
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying
 - [x] Include user input validations
 - [x] Display validation failures to user with error message (example form URL e.g. /posts/new)
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 ## Confirm
 - [x] You have a large number of small Git commits
@@ -28,7 +28,7 @@
 General:
 - [x] Add layout with sign out, create room, create item, etc
 - [x] Can I add some CSS styling? Where does it go? Public folder?
-- [ ] Add error messages where needed
+- [x] Add error messages where needed
 - [x] Make sure rooms are only found through user
 - [x] Make sure items are only found through rooms or users
 User:
