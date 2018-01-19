@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 		@user = current_user
 
 		erb :'/items/index'
+		
 	end
 
 	get '/items/new' do
